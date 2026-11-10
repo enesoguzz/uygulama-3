@@ -1,0 +1,108 @@
+/* Tasarım belirteçleri: docs/TASARIM.md bölüm 2. Renk ve ölçüler yalnızca burada tanımlanır. */
+:root {
+  color-scheme: light;
+
+  /* Renkler */
+  --zemin: #f3f6fc;
+  --lacivert: #0a1a3f;
+  --lacivert-2: #12265a;
+  --lacivert-cizgi: #2a3f7e;
+  --lacivert-soluk: #6f82b8;
+  --acik-mavi: #e1e8f8;
+  --vurgu: #1e3a8a;
+  --metin-soluk: #4a5573;
+  --metin-soluk-koyu: #a9b6d6;
+  --beyaz: #ffffff;
+  --cizgi: #dde3f0;
+  /* Giriş alanı kenarlığı: beyaza ve zemine karşı en az 3:1. */
+  --alan-cizgi: #6b7799;
+  /* Koyu zemindeki yarı saydam düğme. */
+  --cam: rgb(255 255 255 / 0.1);
+  --cam-cizgi: rgb(255 255 255 / 0.18);
+  /* Gölge yalnızca açılır menüde kullanılır. */
+  --golge-menu: 0 12px 32px rgb(4 12 36 / 0.35);
+
+  /* Yazı */
+  --yazi-baslik: var(--font-bricolage), var(--font-manrope), sans-serif;
+  --yazi-govde: var(--font-manrope), system-ui, sans-serif;
+  --boyut-dev: clamp(46px, 8.4vw, 112px);
+  --boyut-cumle: clamp(30px, 4.6vw, 56px);
+  --boyut-kart: clamp(32px, 4vw, 52px);
+  --boyut-slogan: clamp(32px, 4.4vw, 56px);
+  --boyut-kayit: clamp(30px, 3.6vw, 44px);
+  --boyut-alinti: clamp(24px, 4.5vw, 30px);
+  --boyut-rakam: clamp(40px, 7vw, 56px);
+  --boyut-giris: clamp(20px, 2.4vw, 23px);
+  --boyut-govde: 18px;
+  --boyut-etiket: 13px;
+
+  /* Biçim */
+  --yaricap-buyuk: 28px;
+  --yaricap-orta: 24px;
+  --yaricap-menu: 18px;
+  --yaricap-hap: 999px;
+  --bosluk: 12px;
+  --genislik-metin: 888px;
+  --genislik-kart: 1120px;
+  --genislik-paragraf: 640px;
+  --dokunma: 44px;
+
+  /* Klavye odağı; koyu bölümler bunu beyaza çevirir. */
+  --odak: var(--lacivert);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--zemin);
+  color: var(--lacivert);
+  font-family: var(--yazi-govde);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--odak);
+  outline-offset: 3px;
+}
+
+::selection {
+  background: var(--lacivert);
+  color: var(--beyaz);
+}
+
+/* İlk ziyaretten sonra açılış alanı gizlenir (bkz. src/lib/acilis.ts). */
+html[data-acilis="gizli"] #acilis {
+  display: none;
+}
+
+.kabuk {
+  position: relative;
+  box-sizing: border-box;
+  min-height: 100svh;
+  padding: var(--bosluk);
+}
+
+/* Bölüm etiketi: "01 — YENİ DOKTRİN". Büyük harfler metinde elle yazılır. */
+.etiket {
+  margin: 0;
+  font-size: var(--boyut-etiket);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--metin-soluk);
+}
+
+/* Yalnızca ekran okuyucular için. */
+.gorunmez {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

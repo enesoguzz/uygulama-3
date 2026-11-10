@@ -1,0 +1,129 @@
+/*
+ * Üç sütunlu ızgara: ortada metin sütunu, iki yanda boşluk.
+ * Metin ortadaki sütunda durur; görseller (figure) kart genişliğine taşar.
+ */
+.govde {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min(var(--genislik-metin), calc(100% - 32px)) minmax(0, 1fr);
+  row-gap: 36px;
+  padding-block: clamp(72px, 11vw, 128px);
+  scroll-margin-top: calc(-1 * clamp(24px, 5vw, 72px));
+}
+
+.govde > * {
+  grid-column: 2;
+  min-width: 0;
+  margin: 0;
+}
+
+.ustSatir {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+.hap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 8px 14px 8px 12px;
+  border-radius: var(--yaricap-hap);
+  background: var(--acik-mavi);
+  font-size: var(--boyut-etiket);
+  font-weight: 700;
+  color: var(--vurgu);
+}
+
+.nokta {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--yaricap-hap);
+  background: var(--vurgu);
+}
+
+.kunye {
+  margin: 0;
+  font-size: var(--boyut-etiket);
+  font-weight: 700;
+  color: var(--metin-soluk);
+}
+
+.baslik {
+  font-family: var(--yazi-baslik);
+  font-size: var(--boyut-dev);
+  line-height: 0.96;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.baslikBaglantisi {
+  color: inherit;
+  text-decoration: none;
+}
+
+.baslikBaglantisi:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.1em;
+}
+
+.giris {
+  max-width: var(--genislik-paragraf);
+  font-size: var(--boyut-giris);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* MDX'ten gelen düz öğeler (sınıfı olmayanlar). */
+.govde > p:not([class]) {
+  max-width: var(--genislik-paragraf);
+  font-size: var(--boyut-govde);
+  line-height: 1.65;
+  color: var(--metin-soluk);
+}
+
+.govde > h2:not([class]) {
+  max-width: var(--genislik-paragraf);
+  margin-top: 28px;
+  font-family: var(--yazi-baslik);
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.govde > p:not([class]) a {
+  color: var(--vurgu);
+  text-underline-offset: 0.15em;
+}
+
+.govde > figure {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: var(--genislik-kart);
+  margin-block: clamp(20px, 4vw, 52px);
+}
+
+.devam {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border-radius: var(--yaricap-hap);
+  background: var(--lacivert);
+  color: var(--beyaz);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.devam:hover {
+  background: var(--lacivert-2);
+}

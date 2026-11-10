@@ -1,0 +1,111 @@
+.alt {
+  max-width: var(--genislik-kart);
+  box-sizing: border-box;
+  margin: var(--bosluk) auto 0;
+  padding: 48px 40px 28px;
+  border-radius: var(--yaricap-buyuk);
+  background: var(--lacivert);
+  color: var(--beyaz);
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  --odak: var(--beyaz);
+}
+
+.ust {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px 64px;
+}
+
+.tanitim {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.slogan {
+  margin: 0;
+  max-width: 520px;
+  font-family: var(--yazi-baslik);
+  font-size: var(--boyut-slogan);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.hakkimda {
+  margin: 0;
+  max-width: 480px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--metin-soluk-koyu);
+}
+
+.sutun {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 160px;
+}
+
+.sutunBasligi {
+  margin: 0;
+  padding-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--metin-soluk-koyu);
+}
+
+.baglanti {
+  display: flex;
+  align-items: center;
+  min-height: var(--dokunma);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--beyaz);
+  text-decoration: none;
+}
+
+a.baglanti:hover,
+.basaDon:hover {
+  color: var(--metin-soluk-koyu);
+}
+
+.taban {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--lacivert-cizgi);
+}
+
+.telif {
+  font-size: 14px;
+  color: var(--metin-soluk-koyu);
+}
+
+.basaDon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--dokunma);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--beyaz);
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .alt {
+    padding: 32px 24px 20px;
+    gap: 40px;
+  }
+}

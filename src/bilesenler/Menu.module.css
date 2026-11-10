@@ -1,0 +1,74 @@
+.kok {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.dugme {
+  width: var(--dokunma);
+  height: var(--dokunma);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--dugme-cizgi);
+  border-radius: var(--yaricap-hap);
+  background: var(--dugme-zemin);
+  color: inherit;
+  cursor: pointer;
+}
+
+.kutu {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  width: 200px;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: var(--yaricap-menu);
+  background: var(--beyaz);
+  box-shadow: var(--golge-menu);
+  display: flex;
+  flex-direction: column;
+  --odak: var(--lacivert);
+}
+
+.kutu[hidden] {
+  display: none;
+}
+
+.satir,
+.ingilizce {
+  display: flex;
+  align-items: center;
+  min-height: var(--dokunma);
+  padding: 0 14px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.satir {
+  border-radius: 12px;
+  color: var(--lacivert);
+  text-decoration: none;
+}
+
+.satir:hover {
+  background: var(--zemin);
+}
+
+.satir:focus-visible {
+  outline-offset: -2px;
+}
+
+.ingilizce {
+  justify-content: space-between;
+  margin: 4px 0 0;
+  border-top: 1px solid var(--cizgi);
+  color: var(--metin-soluk);
+}
+
+.yakinda {
+  font-size: 12px;
+  font-weight: 700;
+}

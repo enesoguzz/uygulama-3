@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doktrin sitesi — tasarım referansı</title>
+<!-- TASARIM REFERANSI: Bu dosya yalnızca görsel hedefi gösterir. Üretim kodu değildir;
+     satır içi stiller bileşenlere ve tasarım belirteçlerine (TASARIM.md) taşınmalıdır.
+     Köşeli parantezli metinler site sahibinin dolduracağı alanlardır. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Manrope:wght@400;500;700&display=swap">
+<style>
+body{margin:0}
+a{color:#FFFFFF}a:hover{color:#A9B6D6}
+@keyframes kayan{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion: reduce){.kayan{animation:none !important}}
+#menu[hidden]{display:none !important}
+html{scroll-behavior:smooth}
+</style>
+</head>
+<body>
+<div style="background: #F3F6FC; color: #0A1A3F; font-family: 'Manrope', system-ui, sans-serif; padding: 12px; box-sizing: border-box">
+
+<section id="ust" style="position: relative; height: 696px; box-sizing: border-box; padding: 40px 24px; border-radius: 28px; background: #0A1A3F; color: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 36px">
+<header style="position: absolute; top: 0; left: 0; right: 0; height: 76px; display: flex; align-items: center; justify-content: center">
+<a href="#ust" aria-label="Ana sayfa" style="display: flex; align-items: center; justify-content: center; width: 44px; height: 44px"><svg aria-hidden="true" width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="16" cy="16" r="13"></circle><circle cx="16" cy="16" r="4" fill="#FFFFFF" stroke="none"></circle></svg></a>
+<button type="button" aria-label="Menü" id="menu-dugme" aria-expanded="false" aria-controls="menu" style="position: absolute; right: 16px; top: 16px; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; background: rgba(255,255,255,0.1); cursor: pointer"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"><path d="M3 6 H15 M3 12 H15"></path></svg></button>
+</header>
+<nav id="menu" hidden aria-label="Menü" style="position: absolute; top: 68px; right: 16px; width: 200px; box-sizing: border-box; padding: 8px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 12px 32px rgba(4,12,36,0.35); display: flex; flex-direction: column">
+<a href="#doktrin" style="display: flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 12px; font-size: 15px; font-weight: 500; color: #0A1A3F; text-decoration: none">Doktrinler</a>
+<a href="#ust" style="display: flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 12px; font-size: 15px; font-weight: 500; color: #0A1A3F; text-decoration: none">Açılış videosu</a>
+<a href="#hakkimda" style="display: flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 12px; font-size: 15px; font-weight: 500; color: #0A1A3F; text-decoration: none">Hakkımda</a>
+<a href="#ust" lang="en" style="display: flex; align-items: center; justify-content: space-between; min-height: 44px; margin-top: 4px; padding: 0 14px; border-top: 1px solid #DDE3F0; font-size: 15px; font-weight: 500; color: #4A5573; text-decoration: none"><span>English</span><span aria-hidden="true">↗</span></a>
+</nav>
+<div style="display: flex; justify-content: center; gap: 16px; width: 100%; max-width: 600px">
+<div style="flex: 1 1 0; min-width: 0; max-width: 190px; aspect-ratio: 2 / 3; box-sizing: border-box; border: 2px solid #FFFFFF; border-radius: 24px; background: #12265A; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 16px; padding: 16px">
+<svg aria-hidden="true" viewBox="0 0 80 96" style="width: 60%; flex: 1; min-height: 0" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"><circle cx="40" cy="34" r="16"></circle><path d="M10 92 C10 70 24 60 40 60 C56 60 70 70 70 92"></path></svg>
+<span style="font-size: 13px; font-weight: 700">Kadın</span>
+</div>
+<div style="flex: 1 1 0; min-width: 0; max-width: 190px; aspect-ratio: 2 / 3; box-sizing: border-box; border: 1px solid #2A3F7E; border-radius: 24px; background: #12265A; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 16px; padding: 16px">
+<svg aria-hidden="true" viewBox="0 0 80 96" style="width: 60%; flex: 1; min-height: 0" fill="none" stroke="#6F82B8" stroke-width="2" stroke-linecap="round"><circle cx="40" cy="34" r="16"></circle><path d="M10 92 C10 70 24 60 40 60 C56 60 70 70 70 92"></path></svg>
+<span style="font-size: 13px; font-weight: 700; color: #A9B6D6">Adam</span>
+</div>
+<div style="flex: 1 1 0; min-width: 0; max-width: 190px; aspect-ratio: 2 / 3; box-sizing: border-box; border: 1px solid #2A3F7E; border-radius: 24px; background: #12265A; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 16px; padding: 16px">
+<svg aria-hidden="true" viewBox="0 0 80 96" style="width: 60%; flex: 1; min-height: 0" fill="none" stroke="#6F82B8" stroke-width="2" stroke-linecap="round"><circle cx="40" cy="42" r="13"></circle><path d="M16 92 C16 76 27 66 40 66 C53 66 64 76 64 92"></path></svg>
+<span style="font-size: 13px; font-weight: 700; color: #A9B6D6">Çocuk</span>
+</div>
+</div>
+<p style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 30px; line-height: 1.2; font-weight: 600; letter-spacing: -0.02em; text-align: center; max-width: 640px; text-wrap: balance">“Bu videoyu sizin için ben hazırladım.”</p>
+<button type="button" style="font: inherit; font-size: 15px; font-weight: 700; display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border: 0; border-radius: 999px; background: #FFFFFF; color: #0A1A3F; cursor: pointer">
+<svg aria-hidden="true" width="12" height="14" viewBox="0 0 14 16" fill="#0A1A3F"><path d="M1 1 L13 8 L1 15 Z"></path></svg>
+<span>İzle · 0:30</span>
+</button>
+<span style="position: absolute; left: 24px; bottom: 24px; font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #A9B6D6">ÖRNEK VİDEO YERİ</span>
+<a href="#doktrin" style="position: absolute; right: 24px; bottom: 12px; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; text-decoration: none; padding: 12px 0">
+<span>Geç</span>
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2 V12 M3 8 L7 12 L11 8"></path></svg>
+</a>
+</section>
+
+<section aria-label="Sayılarla site" style="max-width: 1120px; margin: 12px auto 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px">
+<div style="box-sizing: border-box; padding: 24px 28px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">1</span>
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">YAYINDA</span>
+</div>
+<div style="box-sizing: border-box; padding: 24px 28px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">2</span>
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">YOLDA</span>
+</div>
+<div style="box-sizing: border-box; padding: 24px 28px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">2026</span>
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">BAŞLANGIÇ</span>
+</div>
+<div style="box-sizing: border-box; padding: 24px 28px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -0.04em; font-variant-numeric: tabular-nums">0</span>
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">SPONSOR</span>
+</div>
+</section>
+
+<div style="max-width: 1120px; margin: 12px auto 0; border-radius: 24px; background: #E1E8F8; overflow: hidden; padding: 18px 0">
+<div class="kayan" style="display: flex; width: max-content; animation: kayan 28s linear infinite; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: 0.01em; white-space: nowrap">
+<div style="display: flex; align-items: center; gap: 28px; padding-right: 28px"><span>BAĞIMSIZ FİKİRLER</span><span aria-hidden="true">●</span><span>ŞEMAYLA ANLATIM</span><span aria-hidden="true">●</span><span>HER İDDİA KAYNAKLI</span><span aria-hidden="true">●</span><span>REKLAM YOK</span><span aria-hidden="true">●</span></div>
+<div aria-hidden="true" style="display: flex; align-items: center; gap: 28px; padding-right: 28px"><span>BAĞIMSIZ FİKİRLER</span><span aria-hidden="true">●</span><span>ŞEMAYLA ANLATIM</span><span aria-hidden="true">●</span><span>HER İDDİA KAYNAKLI</span><span aria-hidden="true">●</span><span>REKLAM YOK</span><span aria-hidden="true">●</span></div>
+</div>
+</div>
+
+<article id="doktrin" style="display: flex; flex-direction: column">
+
+<div style="max-width: 920px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 128px 16px 88px; display: flex; flex-direction: column; align-items: flex-start; gap: 36px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">01 — YENİ DOKTRİN</div>
+<div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px 8px 12px; border-radius: 999px; background: #E1E8F8; font-size: 13px; font-weight: 700; color: #1E3A8A">
+<span aria-hidden="true" style="width: 8px; height: 8px; border-radius: 999px; background: #1E3A8A"></span>
+<span>Yeni · Siber güvenlik</span>
+</div>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: clamp(46px, 8.4vw, 112px); line-height: 0.96; font-weight: 800; letter-spacing: -0.045em; text-wrap: balance">Savaş artık sınırda başlamıyor.</h1>
+<p style="margin: 0; font-size: 23px; line-height: 1.5; font-weight: 500; max-width: 640px">Bir ülkenin elektriği, suyu, bankası ve hastanesi bugün aynı ağa bağlı. O ağa giren, hiçbir sınırı geçmeden hepsine birden ulaşabilir.</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4A5573; max-width: 640px">[Buraya kendi girişin gelecek. İki üç kısa paragraf: neden bu konu, neden şimdi?]</p>
+</div>
+
+<div style="max-width: 1120px; width: 100%; box-sizing: border-box; margin: 0 auto; border-radius: 28px; background: #0A1A3F; color: #FFFFFF; padding: 64px 24px">
+<div style="max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px">
+<div style="overflow-x: auto">
+<div style="position: relative; width: 880px; height: 272px">
+<svg width="8" height="128" viewBox="0 0 8 128" preserveAspectRatio="none" style="position: absolute; left: 88px; top: 72px; width: 8px; height: 128px; overflow: visible; fill: none; stroke: #6F82B8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M 4 0 L 4 128"></path></svg>
+<svg width="8" height="128" viewBox="0 0 8 128" preserveAspectRatio="none" style="position: absolute; left: 320px; top: 72px; width: 8px; height: 128px; overflow: visible; fill: none; stroke: #6F82B8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M 4 0 L 4 128"></path></svg>
+<svg width="8" height="128" viewBox="0 0 8 128" preserveAspectRatio="none" style="position: absolute; left: 552px; top: 72px; width: 8px; height: 128px; overflow: visible; fill: none; stroke: #6F82B8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M 4 0 L 4 128"></path></svg>
+<svg width="8" height="128" viewBox="0 0 8 128" preserveAspectRatio="none" style="position: absolute; left: 784px; top: 72px; width: 8px; height: 128px; overflow: visible; fill: none; stroke: #6F82B8; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round"><path d="M 4 0 L 4 128"></path></svg>
+<div style="position: absolute; left: 0px; top: 0px; width: 184px; height: 72px; box-sizing: border-box; padding: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 19px; font-weight: 700; background: #12265A; border: 1px solid #2A3F7E; border-radius: 999px">Enerji</div>
+<div style="position: absolute; left: 232px; top: 0px; width: 184px; height: 72px; box-sizing: border-box; padding: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 19px; font-weight: 700; background: #12265A; border: 1px solid #2A3F7E; border-radius: 999px">Su</div>
+<div style="position: absolute; left: 464px; top: 0px; width: 184px; height: 72px; box-sizing: border-box; padding: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 19px; font-weight: 700; background: #12265A; border: 1px solid #2A3F7E; border-radius: 999px">Finans</div>
+<div style="position: absolute; left: 696px; top: 0px; width: 184px; height: 72px; box-sizing: border-box; padding: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 19px; font-weight: 700; background: #12265A; border: 1px solid #2A3F7E; border-radius: 999px">Sağlık</div>
+<div style="position: absolute; left: 0px; top: 200px; width: 880px; height: 72px; box-sizing: border-box; padding: 8px; display: flex; align-items: center; justify-content: center; text-align: center; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: 22px; font-weight: 800; letter-spacing: -0.01em; color: #0A1A3F; background: #FFFFFF; border-radius: 999px">Tek ağ, tek zayıf nokta</div>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #A9B6D6; max-width: 520px">Örnek görsel. Her doktrinde metnin arasına böyle bir şema, harita ya da grafik girer.</p>
+</div>
+</div>
+
+<div style="max-width: 920px; width: 100%; box-sizing: border-box; margin: 0 auto; padding: 88px 16px 128px; display: flex; flex-direction: column; gap: 36px">
+<p style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: clamp(30px, 4.6vw, 56px); line-height: 1.08; font-weight: 800; letter-spacing: -0.035em; max-width: 780px; text-wrap: balance">[Önerinin tek cümlesi. Sayfanın en büyük ikinci yazısı bu olacak.]</p>
+<p style="margin: 0; font-size: 18px; line-height: 1.65; color: #4A5573; max-width: 640px">[Önerini açan iki üç paragraf. Ardından ikinci bir görsel, sonra kaynaklar gelir.]</p>
+</div>
+
+</article>
+
+<div style="max-width: 1120px; box-sizing: border-box; margin: 0 auto; padding: 0 20px 20px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">02 — SIRADAKİLER</div>
+<section style="max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px">
+<div style="min-height: 340px; box-sizing: border-box; padding: 32px; border-radius: 28px; background: #E1E8F8; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 48px">
+<span style="padding: 8px 14px; border-radius: 999px; background: #FFFFFF; font-size: 13px; font-weight: 700; color: #1E3A8A">Yakında · Gıda güvenliği</span>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1; font-weight: 800; letter-spacing: -0.04em; text-wrap: balance">Tarlası olmayan ülke sofrasını seçemez.</h2>
+<span style="font-size: 13px; font-weight: 700; color: #4A5573">Güvenlik · Tarım · [TAHMİNİ TARİH]</span>
+</div>
+<div style="min-height: 340px; box-sizing: border-box; padding: 32px; border-radius: 28px; background: #FFFFFF; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 48px">
+<span style="padding: 8px 14px; border-radius: 999px; background: #E1E8F8; font-size: 13px; font-weight: 700; color: #1E3A8A">Yakında · Su güvenliği</span>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: clamp(32px, 4vw, 52px); line-height: 1; font-weight: 800; letter-spacing: -0.04em; text-wrap: balance">Bir sonraki kriz muslukta.</h2>
+<span style="font-size: 13px; font-weight: 700; color: #4A5573">Güvenlik · Altyapı · [TAHMİNİ TARİH]</span>
+</div>
+</section>
+
+<section style="max-width: 1120px; box-sizing: border-box; margin: 12px auto 0; padding: 48px 40px; border-radius: 28px; background: #FFFFFF; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px 64px">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 20px">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: #4A5573">03 — HABERDAR OL</div>
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.04; font-weight: 800; letter-spacing: -0.035em; max-width: 480px; text-wrap: balance">Yeni doktrin yayınlanınca haberin olsun.</h2>
+</div>
+<form style="flex: 1 1 320px; max-width: 460px; display: flex; flex-direction: column; gap: 10px">
+<label for="eposta" style="font-size: 14px; font-weight: 700">E-posta adresin</label>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<input id="eposta" type="email" placeholder="ad@ornek.com" style="flex: 1 1 200px; min-width: 0; box-sizing: border-box; height: 52px; padding: 0 20px; border: 1px solid #8793B5; border-radius: 999px; background: #F3F6FC; color: #0A1A3F; font: inherit; font-size: 16px">
+<button type="button" style="font: inherit; font-size: 15px; font-weight: 700; height: 52px; padding: 0 24px; border: 0; border-radius: 999px; background: #0A1A3F; color: #FFFFFF; cursor: pointer">Haber ver</button>
+</div>
+<span style="font-size: 13px; color: #4A5573">Sadece yeni doktrin çıktığında yazarım.</span>
+</form>
+</section>
+
+<footer id="hakkimda" style="max-width: 1120px; box-sizing: border-box; margin: 12px auto 0; padding: 48px 40px 28px; border-radius: 28px; background: #0A1A3F; color: #FFFFFF; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px 64px">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; align-items: flex-start; gap: 24px">
+<svg aria-hidden="true" width="36" height="36" viewBox="0 0 32 32" fill="none" stroke="#FFFFFF" stroke-width="2"><circle cx="16" cy="16" r="13"></circle><circle cx="16" cy="16" r="4" fill="#FFFFFF" stroke="none"></circle></svg>
+<p style="margin: 0; font-family: 'Bricolage Grotesque', 'Manrope', sans-serif; font-size: clamp(32px, 4.4vw, 56px); line-height: 1; font-weight: 800; letter-spacing: -0.04em; max-width: 520px; text-wrap: balance">Yeni dünyaya genç fikirler.</p>
+</div>
+<nav aria-label="Alt menü" style="display: flex; flex-direction: column; gap: 4px; min-width: 160px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #A9B6D6; padding-bottom: 8px">SİTE</span>
+<a href="#doktrin" style="font-size: 16px; font-weight: 500; text-decoration: none; padding: 10px 0">Doktrinler</a>
+<a href="#ust" style="font-size: 16px; font-weight: 500; text-decoration: none; padding: 10px 0">Açılış videosu</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 4px; min-width: 160px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.06em; color: #A9B6D6; padding-bottom: 8px">İLETİŞİM</span>
+<span style="font-size: 16px; font-weight: 500; padding: 10px 0">[E-POSTA]</span>
+<span style="font-size: 16px; font-weight: 500; padding: 10px 0">[LINKEDIN]</span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding-top: 20px; border-top: 1px solid #2A3F7E">
+<span style="font-size: 14px; color: #A9B6D6">© 2026 [ADIN SOYADIN]</span>
+<a href="#ust" style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; text-decoration: none; padding: 12px 0">
+<span>Başa dön</span>
+<svg aria-hidden="true" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12 V2 M3 6 L7 2 L11 6"></path></svg>
+</a>
+</div>
+</footer>
+
+</div>
+<script>
+(function () {
+  var dugme = document.getElementById('menu-dugme');
+  var menu = document.getElementById('menu');
+  function kapat() { menu.hidden = true; dugme.setAttribute('aria-expanded', 'false'); }
+  dugme.addEventListener('click', function (e) {
+    e.stopPropagation();
+    menu.hidden = !menu.hidden;
+    dugme.setAttribute('aria-expanded', String(!menu.hidden));
+  });
+  menu.addEventListener('click', kapat);
+  document.addEventListener('click', function (e) { if (!menu.contains(e.target)) kapat(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') kapat(); });
+})();
+</script>
+</body>
+</html>

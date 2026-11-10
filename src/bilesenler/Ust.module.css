@@ -1,0 +1,31 @@
+.ust {
+  position: relative;
+  z-index: 2;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lacivert);
+  --dugme-zemin: var(--beyaz);
+  --dugme-cizgi: var(--cizgi);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--dokunma);
+  height: var(--dokunma);
+  border-radius: var(--yaricap-hap);
+  color: inherit;
+}
+
+/* Açılış alanı görünürken: lacivert zeminin üzerinde, beyaz. */
+:global(html:not([data-acilis="gizli"])) .uzerinde {
+  position: absolute;
+  inset: var(--bosluk) var(--bosluk) auto;
+  color: var(--beyaz);
+  --dugme-zemin: var(--cam);
+  --dugme-cizgi: var(--cam-cizgi);
+  --odak: var(--beyaz);
+}

@@ -1,0 +1,137 @@
+.acilis {
+  position: relative;
+  box-sizing: border-box;
+  /* Yaklaşık bir ekran yüksekliği; çok kısa ve çok uzun ekranlarda sınırlanır. */
+  height: calc(100svh - 2 * var(--bosluk));
+  min-height: 560px;
+  max-height: 920px;
+  padding: 92px 24px 72px;
+  border-radius: var(--yaricap-buyuk);
+  background: var(--lacivert);
+  color: var(--beyaz);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 4svh, 36px);
+  --odak: var(--beyaz);
+}
+
+.kisiler {
+  display: flex;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 16px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kisi {
+  /* Genişlik hem ekran enine hem ekran boyuna göre küçülür. */
+  width: min(190px, 28vw, 26svh);
+  aspect-ratio: 2 / 3;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid var(--lacivert-cizgi);
+  border-radius: var(--yaricap-orta);
+  background: var(--lacivert-2);
+  color: var(--metin-soluk-koyu);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.kisi svg {
+  width: 60%;
+  flex: 1;
+  min-height: 0;
+  color: var(--lacivert-soluk);
+}
+
+.konusan {
+  border: 2px solid var(--beyaz);
+  color: var(--beyaz);
+}
+
+.konusan svg {
+  color: var(--beyaz);
+}
+
+.alinti {
+  margin: 0;
+  max-width: 640px;
+  font-family: var(--yazi-baslik);
+  font-size: var(--boyut-alinti);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.izle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: var(--yaricap-hap);
+  background: var(--beyaz);
+  color: var(--lacivert);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.izle:hover {
+  background: var(--acik-mavi);
+}
+
+.video {
+  width: 100%;
+  max-width: 960px;
+  min-height: 0;
+  flex: 0 1 auto;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--yaricap-orta);
+  background: var(--lacivert-2);
+}
+
+.video[hidden] {
+  display: none;
+}
+
+.not {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--metin-soluk-koyu);
+}
+
+.gec {
+  position: absolute;
+  right: 24px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: var(--dokunma);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--beyaz);
+  text-decoration: none;
+}
+
+.gec:hover {
+  color: var(--metin-soluk-koyu);
+}

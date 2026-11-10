@@ -1,0 +1,98 @@
+.bolum {
+  max-width: var(--genislik-kart);
+  box-sizing: border-box;
+  margin: var(--bosluk) auto 0;
+  padding: 48px 40px;
+  border-radius: var(--yaricap-buyuk);
+  background: var(--beyaz);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px 64px;
+}
+
+.baslikAlani {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.baslik {
+  margin: 0;
+  max-width: 480px;
+  font-family: var(--yazi-baslik);
+  font-size: var(--boyut-kayit);
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.form {
+  flex: 1 1 320px;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.alanAdi {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.satir {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.alan {
+  flex: 1 1 200px;
+  min-width: 0;
+  box-sizing: border-box;
+  height: 52px;
+  padding: 0 20px;
+  border: 1px solid var(--alan-cizgi);
+  border-radius: var(--yaricap-hap);
+  background: var(--zemin);
+  color: var(--lacivert);
+  font: inherit;
+  font-size: 16px;
+}
+
+.alan::placeholder {
+  color: var(--metin-soluk);
+  opacity: 1;
+}
+
+.dugme {
+  height: 52px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: var(--yaricap-hap);
+  background: var(--lacivert);
+  color: var(--beyaz);
+  font: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dugme:hover {
+  background: var(--lacivert-2);
+}
+
+.not {
+  margin: 0;
+  font-size: var(--boyut-etiket);
+  color: var(--metin-soluk);
+}
+
+@media (max-width: 600px) {
+  .bolum {
+    padding: 32px 24px;
+  }
+}

@@ -1,0 +1,80 @@
+.bant {
+  display: block;
+  width: 100%;
+  max-width: var(--genislik-kart);
+  box-sizing: border-box;
+  margin: var(--bosluk) auto 0;
+  padding: 18px 0;
+  border: 0;
+  border-radius: var(--yaricap-orta);
+  background: var(--acik-mavi);
+  color: var(--lacivert);
+  overflow: hidden;
+  font-family: var(--yazi-baslik);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.serit {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  animation: kayan 28s linear infinite;
+}
+
+.bant:hover .serit,
+.durdu .serit {
+  animation-play-state: paused;
+}
+
+.grup {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding-right: 28px;
+}
+
+.slogan {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.slogan::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: var(--yaricap-hap);
+  background: currentColor;
+}
+
+@keyframes kayan {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Hareket azaltma: kayma yok, sloganlar ortalanır ve gerekirse alt satıra iner. */
+.sabit {
+  cursor: default;
+  padding: 18px 24px;
+}
+
+.sabit .grup {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 28px;
+  padding-right: 0;
+}
+
+.sabit .slogan::after {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .serit {
+    animation: none;
+  }
+}

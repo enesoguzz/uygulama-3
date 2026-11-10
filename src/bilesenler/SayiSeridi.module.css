@@ -1,0 +1,42 @@
+.serit {
+  max-width: var(--genislik-kart);
+  margin: var(--bosluk) auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--bosluk);
+}
+
+.kart {
+  box-sizing: border-box;
+  padding: 24px 28px;
+  border-radius: var(--yaricap-orta);
+  background: var(--beyaz);
+  display: flex;
+  /* Okuma sırası etiket → rakam, görünüm rakam → etiket. */
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+
+.rakam {
+  margin: 0;
+  font-family: var(--yazi-baslik);
+  font-size: var(--boyut-rakam);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Telefonda tek sütun: rakam solda, etiket sağda, kartlar alçak. */
+@media (max-width: 600px) {
+  .serit {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .kart {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+  }
+}
