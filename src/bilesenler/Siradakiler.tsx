@@ -1,4 +1,5 @@
 import type { YakindaDoktrin } from "@/lib/doktrinler";
+import { DoktrinKarti, DoktrinKartlari } from "./DoktrinKarti";
 import s from "./Siradakiler.module.css";
 
 /** Yakında yayımlanacak doktrinlerin kartları. Sayfaları olmadığı için bağlantı değildir. */
@@ -10,15 +11,17 @@ export function Siradakiler({ doktrinler }: { doktrinler: YakindaDoktrin[] }) {
       <h2 id="siradakiler" className={`etiket ${s.baslik}`}>
         02 — SIRADAKİLER
       </h2>
-      <ul className={s.kartlar}>
+      <DoktrinKartlari>
         {doktrinler.map((doktrin) => (
-          <li key={doktrin.slug} className={s.kart}>
-            <span className={s.hap}>Yakında · {doktrin.alan}</span>
-            <h3 className={s.kartBasligi}>{doktrin.baslik}</h3>
-            <span className={s.alt}>{[...doktrin.etiketler, doktrin.tahminiTarih].join(" · ")}</span>
-          </li>
+          <DoktrinKarti
+            key={doktrin.slug}
+            duzey="h3"
+            hap={`Yakında · ${doktrin.alan}`}
+            baslik={doktrin.baslik}
+            alt={[...doktrin.etiketler, doktrin.tahminiTarih].join(" · ")}
+          />
         ))}
-      </ul>
+      </DoktrinKartlari>
     </section>
   );
 }

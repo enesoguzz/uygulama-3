@@ -1,0 +1,90 @@
+.kartlar {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--bosluk);
+}
+
+.ikili {
+  grid-template-columns: repeat(auto-fill, minmax(min(480px, 100%), 1fr));
+}
+
+.kart {
+  position: relative;
+  min-height: 340px;
+  box-sizing: border-box;
+  padding: 32px;
+  border-radius: var(--yaricap-buyuk);
+  background: var(--beyaz);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 48px;
+  --hap-zemin: var(--acik-mavi);
+}
+
+/* Kartlar sırayla açık mavi ve beyaz. */
+.kart:nth-child(odd) {
+  background: var(--acik-mavi);
+  --hap-zemin: var(--beyaz);
+}
+
+.hap {
+  padding: 8px 14px;
+  border-radius: var(--yaricap-hap);
+  background: var(--hap-zemin);
+  font-size: var(--boyut-etiket);
+  font-weight: 700;
+  color: var(--vurgu);
+}
+
+.baslik {
+  margin: 0;
+  font-family: var(--yazi-baslik);
+  font-size: var(--boyut-kart);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+
+.alt {
+  font-size: var(--boyut-etiket);
+  font-weight: 700;
+  color: var(--metin-soluk);
+}
+
+/* Bağlantı kartın tamamını kaplar; odak çerçevesi kartın çevresinde görünür. */
+.baglanti {
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.baglanti::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.tiklanir:hover .baglanti {
+  text-decoration: underline;
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.1em;
+}
+
+.tiklanir:has(.baglanti:focus-visible) {
+  outline: 2px solid var(--odak);
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .kart {
+    min-height: 280px;
+    padding: 24px;
+  }
+}

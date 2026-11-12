@@ -34,7 +34,7 @@ export function AltBolum() {
         </div>
         <nav aria-label="Alt menü" className={s.sutun}>
           <p className={s.sutunBasligi}>SİTE</p>
-          <Link href="/#doktrin" className={s.baglanti}>
+          <Link href="/doktrinler" className={s.baglanti}>
             Doktrinler
           </Link>
           <Link href={`/#${ACILIS_KIMLIGI}`} className={s.baglanti}>

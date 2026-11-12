@@ -59,6 +59,7 @@ Giriş paragrafı.
 
 - `{/* ana-sayfa-sonu */}` satırının üstü ana sayfada giriş olarak görünür, tamamı doktrin sayfasında.
 - En yeni tarihli `yayinda` doktrin ana sayfanın girişi olur.
+- Yayındaki tüm doktrinler, eskileri de içinde, `/doktrinler` sayfasında kart olarak listelenir (menüdeki "Doktrinler").
 - `yakinda` doktrinler yalnızca ana sayfada kart olarak görünür, sayfaları üretilmez.
 - Ön bilgide eksik ya da hatalı alan varsa `npm run build` dosya adını söyleyerek durur.
 

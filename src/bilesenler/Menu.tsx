@@ -60,7 +60,7 @@ export function Menu({ ingilizce }: { ingilizce: boolean }) {
       </button>
 
       <nav id={kutuKimligi} className={s.kutu} aria-label="Menü" hidden={!acik}>
-        <Link href="/#doktrin" className={s.satir} onClick={kapat}>
+        <Link href="/doktrinler" className={s.satir} onClick={kapat}>
           Doktrinler
         </Link>
         <Link
